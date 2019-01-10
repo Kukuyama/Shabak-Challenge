@@ -80,8 +80,8 @@ def hallelujah():
 #A function that divides the entire text to two lists - 'texts' and 'values'
 #it and return its value in Gimetria
 
-parse_value(all_texts) #Parsing the text to 'texts' and 'values'
-hallelujah() #Adds all of the values to finding_median_list
+parse_value(all_texts) 				#Parsing the text to 'texts' and 'values'
+hallelujah() 						#Adds all of the values to finding_median_list
 
 correct_final_list = [] 
 for i in finding_median_list:
@@ -96,12 +96,7 @@ for i in correct_final_list:
 		below_median += i    #Sums up all of the values lower than the median
 
 base64_password = base64.b64encode(str(below_median).encode('ascii'))  #Takes the sum of below_median and encodes it into base64
-
-print 'Median is',median
-sleep(1)
-print 'Sum of all below median:', below_median
-sleep(1)
-print 'Password in base64 is:',base64_password
-sleep(1)
-print 'BOOM!'
+f = open('Success.txt','a')
+f.write('Median is ' + str(median) + '\n' + 'Sum of all below median: ' + str(below_median) + '\n' + 'Password in base64 is: ' + str(base64_password) + '\n')
+print 'Done!\nThe password was written to the file "Success.txt"'
 

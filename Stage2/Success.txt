@@ -1,0 +1,3 @@
+Median is 63557.0
+Sum of all below median: 2501577
+Password in base64 is: MjUwMTU3Nw==
